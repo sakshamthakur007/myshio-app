@@ -11,10 +11,15 @@ export const DataProvider = ({children}) => {
     const [token,setToken] = useState(false)
 
     const refreshToken = async () => {
-        const res = await axios.get('https://my-shio-api.vercel.app/user/refresh_token')
-
-        setToken(res.data.accesstoken)
+    try {
+      const res = await axios.get('https://my-shio-api.vercel.app/user/refresh_token', {
+        withCredentials: true, // Ensure cookies are sent with the request
+      });
+      setToken(res.data.accesstoken);
+    } catch (error) {
+      console.error("Failed to refresh token:", error.response ? error.response.data : error.message);
     }
+  };
 
     useEffect(()=>{
         const firstLogin = localStorage.getItem('firstLogin')
