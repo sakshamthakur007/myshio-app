@@ -10,7 +10,7 @@ const UserAPI = (token) => {
         if (token) {
             const getUser = async () => {
                 try {
-                    const res = await axios.get('https://myshio-api.vercel.app/user/infor', {
+                    const res = await axios.get('https://my-shio-api.vercel.app/user/infor', {
                         headers: { Authorization: token }
                     });
 

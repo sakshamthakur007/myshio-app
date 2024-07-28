@@ -6,7 +6,7 @@ const ProductAPI = () => {
     const [products,setProducts]=useState([])
 
     const getProducts = async()=> {
-        const res = await axios.get('https://myshio-api.vercel.app/api/products')
+        const res = await axios.get('https://my-shio-api.vercel.app/api/products')
         setProducts(res.data.products)
     }
 

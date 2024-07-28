@@ -17,7 +17,7 @@ const Register = () => {
   const registerSubmit =async e => {
     e.preventDefault()
     try{
-      await axios.post('https://myshio-api.vercel.app/user/register',{...user})
+      await axios.post('https://my-shio-api.vercel.app/user/register',{...user})
 
       localStorage.setItem('firstLogin',true)
 
