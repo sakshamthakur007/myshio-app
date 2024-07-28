@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
-
+import './register.css'
 const Register = () => {
   const [user,setUser] = useState({
     name:'',
