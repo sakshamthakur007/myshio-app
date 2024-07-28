@@ -48,7 +48,7 @@ const Header = () => {
 
         <div className='logo'>
             <h1>
-                <Link to="/">{isAdmin?'Admin':'30DC Shop'}</Link>
+                <Link to="/">{isAdmin?'Admin':'My Shio'}</Link>
             </h1>
         </div>
 
