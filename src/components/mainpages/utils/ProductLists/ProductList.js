@@ -12,7 +12,7 @@ const ProductList = ({product,isAdmin}) => {
         isAdmin && <input type='checkbox' checked={product.checked}/>
         
       }
-{ console.log(product.images.url) &&  <img src={product.images.url} alt=''/>  }
+
   
         <div className='product_box'>
             <h2 title={product.title}>{product.title}</h2>
