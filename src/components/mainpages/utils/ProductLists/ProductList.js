@@ -5,14 +5,15 @@ import { GlobalState } from '../../../../GlobalState'
 import BtnRender from './BtnRender'
 
 const ProductList = ({product,isAdmin}) => {
-console.log(product.images.url);
+
   return (
     <div className='product_card'>
       {
         isAdmin && <input type='checkbox' checked={product.checked}/>
+        
       }
-        <img src={product.images.url} alt=''/>
-
+{ console.log(product.images.url) &&  <img src={product.images.url} alt=''/>  }
+  
         <div className='product_box'>
             <h2 title={product.title}>{product.title}</h2>
             <span>${product.price}</span>
