@@ -11,7 +11,7 @@ const ProductList = ({product,isAdmin}) => {
       {
         isAdmin && <input type='checkbox' checked={product.checked}/>
       }
-        <img src={product.images.url} alt=''/>
+        <img src={imageUrl} alt={product.title} onError={(e) => e.target.src = 'https://via.placeholder.com/150'} />
 
         <div className='product_box'>
             <h2 title={product.title}>{product.title}</h2>
