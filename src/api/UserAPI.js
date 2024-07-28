@@ -29,19 +29,29 @@ const UserAPI = (token) => {
     const addCart = (product) => {
         if (!isLogged) return alert("Please log in first.");
 
+        // Debugging information
+        console.log('Adding product to cart:', product);
+        console.log('Current cart:', cart);
+
         const check = cart.every(item => item._id !== product._id);
+
+        console.log('Check result:', check);
 
         if (check) {
             setCart([...cart, { ...product, quantity: 1 }]);
+            console.log('Product added to cart:', product);
         } else {
             alert("This product has already been added to the cart.");
         }
+
+        // Debugging information
+        console.log('Updated cart:', cart);
     };
 
     return {
         isLogged: [isLogged, setIsLogged],
         isAdmin: [isAdmin, setIsAdmin],
-        cart:[cart,setCart],
+        cart: [cart, setCart],
         addCart: addCart
     };
 };
