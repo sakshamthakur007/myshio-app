@@ -7,12 +7,12 @@
     margin: 10px 0;
     position: relative;
     box-sizing: border-box; /* Include padding and border in width */
-    background-image: url('https://pixabay.com/get/g5276d335807e51a952d73f6ea51aafa2aedc8ebdd2015610318517b73ba6a5919c91fa93cd79aae1ae23f1b548da64bc9e0309d92e5e98fe592185b2ad89de219439b88fcd37698ffc0f844f7bb9dd62_640.jpg'); /* URL of the background image */
+    background-image: url('https://cdn.pixabay.com/photo/2016/11/19/15/32/laptop-1839876_1280.jpg'); /* URL of the background image */
     background-size: cover; /* Scale the background image to cover the entire card */
-    background-position: center; /* Center the background image */
+    background-position: center top; /* Move the background image upwards */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
 }
 
-/* Ensure images fit within the card */
 .product_card img {
     width: 100%; /* Full width of the card */
     height: 300px; /* Fixed height */
@@ -20,7 +20,16 @@
     object-fit: cover; /* Maintain aspect ratio */
 }
 
-/* Consistent styling for text content */
+.product_box {
+    position: absolute;
+    bottom: 15px; /* Position text box at the bottom */
+    left: 15px;
+    right: 15px;
+    color: #fff; /* Text color for visibility */
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add background to make text more readable */
+    padding: 10px; /* Add padding around text */
+}
+
 .product_box h2 {
     width: 100%;
     text-overflow: ellipsis;
@@ -39,11 +48,10 @@
     width: 100%;
     height: 70px; /* Fixed height for text area */
     overflow: hidden;
-    color: #323232;
+    color: #fff; /* Adjust color for visibility */
     margin: 0; /* Ensure no margin affecting width */
 }
 
-/* Consistent styling for button row */
 .row_btn {
     width: 100%;
     margin-top: 10px;
@@ -56,7 +64,7 @@
     text-align: center;
     text-transform: uppercase;
     color: white;
-    font-weight: 60;
+    font-weight: 600; /* Correct font-weight value */
     letter-spacing: 2px;
     padding: 6px;
     display: inline-block; /* Ensure links are aligned properly */
