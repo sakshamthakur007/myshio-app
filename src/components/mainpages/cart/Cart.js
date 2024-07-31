@@ -14,22 +14,31 @@ const Cart = () => {
 
   return (
     <div>
-      {cart.map(item => (
-        <div key={item.product._id} className='detail'>
-          <img src={item.product.images} alt={item.product.title} />
-          <div className='box-detail'>
-            <div className='row'>
-              <h2>{item.product.title}</h2>
-              <h6>Product ID: {item.product.product_id}</h6>
+      {cart.map(item => {
+        const { product } = item;
+        // Check if product or product.images is undefined
+        if (!product || !product.images) {
+          return <p key={item._id}>Product data is missing</p>;
+        }
+
+        return (
+          <div key={product._id} className='detail'>
+            {/* Check if images is a string or an object and handle accordingly */}
+            <img src={typeof product.images === 'string' ? product.images : ''} alt={product.title || 'Product Image'} />
+            <div className='box-detail'>
+              <div className='row'>
+                <h2>{product.title || 'No Title'}</h2>
+                <h6>Product ID: {product.product_id || 'No ID'}</h6>
+              </div>
+              <span>${product.price || 'No Price'}</span>
+              <p>{product.description || 'No Description'}</p>
+              <p>{product.content || 'No Content'}</p>
+              <p>Sold: {product.sold || 'No Data'}</p>
+              <Link to='/checkout' className='cart'>Buy Now</Link>
             </div>
-            <span>${item.product.price}</span>
-            <p>{item.product.description}</p>
-            <p>{item.product.content}</p>
-            <p>Sold: {item.product.sold}</p>
-            <Link to='/checkout' className='cart'>Buy Now</Link>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 };
