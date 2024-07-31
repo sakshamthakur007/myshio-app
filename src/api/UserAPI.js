@@ -16,7 +16,6 @@ const UserAPI = (token) => {
 
                     setIsLogged(true);
                     res.data.role === 1 ? setIsAdmin(true) : setIsAdmin(false);
-
                     console.log(res);
                 } catch (err) {
                     alert(err.response.data.msg);
@@ -29,23 +28,23 @@ const UserAPI = (token) => {
     const addCart = (product) => {
         if (!isLogged) return alert("Please log in first.");
 
-        // Debugging information
         console.log('Adding product to cart:', product);
         console.log('Current cart:', cart);
 
         const check = cart.every(item => item._id !== product._id);
-
         console.log('Check result:', check);
 
         if (check) {
-            setCart([...cart, { ...product, quantity: 1 }]);
+            setCart(prevCart => {
+                const newCart = [...prevCart, { ...product, quantity: 1 }];
+                // Optionally, you can add code to update the cart on the server here.
+                console.log('Updated cart:', newCart);
+                return newCart;
+            });
             console.log('Product added to cart:', product);
         } else {
             alert("This product has already been added to the cart.");
         }
-
-        // Debugging information
-        console.log('Updated cart:', cart);
     };
 
     return {
