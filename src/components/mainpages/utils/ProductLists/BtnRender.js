@@ -35,4 +35,3 @@ const BtnRender = ({ product }) => {
 export default BtnRender;
 
 
-export default BtnRender;
