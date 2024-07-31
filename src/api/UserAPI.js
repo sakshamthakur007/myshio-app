@@ -29,7 +29,13 @@ const UserAPI = (token) => {
         if (!isLogged) return alert("Please log in first.");
 
         setCart(prevCart => {
+            // Debugging: Log the IDs of the current items in the cart
+            console.log('Current cart IDs:', prevCart.map(item => item._id));
+
             const isProductInCart = prevCart.some(item => item._id === product._id);
+            
+            // Debugging: Log the result of the check
+            console.log('Product ID:', product._id, 'Is in cart:', isProductInCart);
 
             if (isProductInCart) {
                 alert("This product has already been added to the cart.");
