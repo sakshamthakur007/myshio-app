@@ -21,7 +21,7 @@ const ProductList = ({ product, isAdmin }) => {
         <p>{product.description}</p>
       </div>
 
-      <BtnRender product={product} />
+      <BtnRender _id={product._id} />
     </div>
   );
 }
