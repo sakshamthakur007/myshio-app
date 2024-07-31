@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import BtnRender from './BtnRender';
 
 const ProductList = ({ product, isAdmin }) => {
+  console.log(product);
   return (
     <div className='product_card'>
       {isAdmin && (
