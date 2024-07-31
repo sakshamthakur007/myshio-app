@@ -4,6 +4,12 @@ import BtnRender from './BtnRender';
 
 const ProductList = ({ product, isAdmin }) => {
   console.log(product);
+
+  const handleCheckboxChange = (productId) => {
+    // Implement the function to handle checkbox change for admin
+    console.log(`Checkbox for product ${productId} changed`);
+  };
+
   return (
     <div className='product_card'>
       {isAdmin && (
@@ -22,15 +28,9 @@ const ProductList = ({ product, isAdmin }) => {
         <p>{product.description}</p>
       </div>
 
-     <BtnRender product={product} /
+      <BtnRender product={product} />
     </div>
   );
-}
-
-const handleCheckboxChange = (productId) => {
-  // Implement the function to handle checkbox change for admin
-  console.log(`Checkbox for product ${productId} changed`);
 };
 
 export default ProductList;
-
