@@ -1,25 +1,16 @@
 .product_card {
-    width: 300px; 
-    height: 500px;
+    width: 300px; /* Fixed width for consistency */
+    height: 500px; /* Fixed height for consistency */
     overflow: hidden;
     padding: 15px;
     box-shadow: 0 0 15px #ddd;
     margin: 10px 0;
     position: relative;
-    box-sizing: border-box;
-    background-image: url('https://cdn.pixabay.com/photo/2016/11/19/15/32/laptop-1839876_1280.jpg');
-    background-size: 150%;
-    background-position: center;
-    background-repeat: no-repeat;
+    box-sizing: border-box; /* Include padding and border in width */
+    background-image: url('https://cdn.pixabay.com/photo/2016/11/19/15/32/laptop-1839876_1280.jpg'); /* URL of the background image */
+    background-size: cover; /* Scale the background image to cover the entire card */
+    background-position: center; /* Center the background image */
 }
-
-/* Media query for smaller screens */
-@media (max-width: 600px) {
-    .product_card {
-        background-size: 100%;
-    }
-}
-
 
 /* Ensure images fit within the card */
 .product_card img {
