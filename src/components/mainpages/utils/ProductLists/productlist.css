@@ -7,7 +7,7 @@
     margin: 10px 0;
     position: relative;
     box-sizing: border-box; /* Include padding and border in width */
-    background-image: url('https://cdn.pixabay.com/photo/2016/11/19/15/32/laptop-1839876_1280.jpg'); /* URL of the background image */
+    background-image: url('https://pixabay.com/get/g5276d335807e51a952d73f6ea51aafa2aedc8ebdd2015610318517b73ba6a5919c91fa93cd79aae1ae23f1b548da64bc9e0309d92e5e98fe592185b2ad89de219439b88fcd37698ffc0f844f7bb9dd62_640.jpg'); /* URL of the background image */
     background-size: cover; /* Scale the background image to cover the entire card */
     background-position: center; /* Center the background image */
 }
