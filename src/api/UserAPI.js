@@ -27,12 +27,14 @@ const UserAPI = (token) => {
     
    const addCart = (product) => {
         if (!isLogged) return alert("Please log in first.");
-        console.log("hey");
+       
         const check = cart.every(item => item.id !== product._id);
 
         if (check) {
+             console.log("hey");
             setCart([...cart, { ...product, quantity: 1 }]);
         } else {
+             console.log("ney");
             alert("This product has already been added to the cart.");
         }
     };
