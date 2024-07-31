@@ -27,7 +27,7 @@ const BuyNowButton = ({ onClick, label = 'Buy Now' }) => {
                 fontSize: '1rem'
             }}
         >
-            {label}
+         Buy Now
         </button>
     );
 };
