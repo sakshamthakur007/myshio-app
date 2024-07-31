@@ -7,10 +7,12 @@
     margin: 10px 0;
     position: relative;
     box-sizing: border-box; /* Include padding and border in width */
-    background-image: url('https://pixabay.com/photos/laptop-digital-device-technology-5673901/'); /* URL of the background image */
-    background-size: cover; /* Scale the background image to cover the entire card */
+    background-image: url('https://example.com/laptop-image.jpg'); /* URL of the background image */
+    background-size: 150%; /* Increase size to zoom out */
     background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent background image repetition */
 }
+
 
 /* Ensure images fit within the card */
 .product_card img {
