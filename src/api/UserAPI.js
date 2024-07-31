@@ -27,7 +27,7 @@ const UserAPI = (token) => {
     
    const addCart = (product) => {
         if (!isLogged) return alert("Please log in first.");
-
+        console.log("hey");
         const check = cart.every(item => item.id !== product._id);
 
         if (check) {
