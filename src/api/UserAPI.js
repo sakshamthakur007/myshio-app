@@ -25,25 +25,16 @@ const UserAPI = (token) => {
     }, [token]);
 
     
-    const addCart = async (product) => {
+   const addCart = (product) => {
         if (!isLogged) return alert("Please log in first.");
 
-        if (!product) {
-            return alert("Failed to fetch product details.");
+        const check = cart.every(item => item.id !== product._id);
+
+        if (check) {
+            setCart([...cart, { ...product, quantity: 1 }]);
+        } else {
+            alert("This product has already been added to the cart.");
         }
-
-        setCart(prevCart => {
-            const isProductInCart = prevCart.some(item => item._id === product._id);
-
-            if (isProductInCart) {
-                alert("This product has already been added to the cart.");
-                return prevCart; // No change to the cart
-            } else {
-                const newCart = [...prevCart, { ...product, quantity: 1 }];
-                console.log('New cart:', newCart);
-                return newCart;
-            }
-        });
     };
 
     return {
