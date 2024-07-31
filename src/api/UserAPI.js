@@ -24,22 +24,10 @@ const UserAPI = (token) => {
         }
     }, [token]);
 
-    // Function to fetch full product details by ID
-    const fetchProductById = async (productId) => {
-        try {
-            const res = await axios.get(`https://my-shio-api.vercel.app/product/${productId}`);
-            return res.data;
-        } catch (err) {
-            console.error('Failed to fetch product:', err);
-            return null;
-        }
-    };
-
-    const addCart = async (productId) => {
+    
+    const addCart = async (product) => {
         if (!isLogged) return alert("Please log in first.");
 
-        // Fetch full product details
-        const product = await fetchProductById(productId);
         if (!product) {
             return alert("Failed to fetch product details.");
         }
