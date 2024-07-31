@@ -32,7 +32,7 @@ const UserAPI = (token) => {
 
         if (check) {
              console.log("hey");
-            setCart([...cart, { ...product, quantity: 1 }]);
+            setCart(prevCart => [...prevCart, { ...product, quantity: 1 }]);
         } else {
              console.log("ney");
             alert("This product has already been added to the cart.");
