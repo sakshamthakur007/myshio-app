@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { GlobalState } from '../../../GlobalState';
 import { Link } from 'react-router-dom';
-
+import BuyNowButton from './BuyNowButton';
 const Cart = () => {
   const state = useContext(GlobalState);
   const [cart] = state.userAPI.cart;
@@ -34,7 +34,7 @@ const Cart = () => {
               <p>{product.description || 'No Description'}</p>
               <p>{product.content || 'No Content'}</p>
               <p>Sold: {product.sold || 'No Data'}</p>
-              <Link to='/checkout' className='cart'>Buy Now</Link>
+              <BuyNowButton />
             </div>
           </div>
         );
