@@ -25,29 +25,30 @@ const UserAPI = (token) => {
         }
     }, [token]);
 
-    const addCart = (product) => {
-        if (!isLogged) return alert("Please log in first.");
+   const addCart = (product) => {
+    if (!isLogged) return alert("Please log in first.");
 
-        setCart(prevCart => {
-            // Debugging: Log the IDs of the current items in the cart
-            console.log('Current cart IDs:', prevCart.map(item => item._id));
+    setCart(prevCart => {
+        // Debugging: Check product ID and current cart IDs
+        console.log('Product ID to add:', product._id);
+        console.log('Current cart items:', prevCart);
 
-            const isProductInCart = prevCart.some(item => item._id === product._id);
-            
-            // Debugging: Log the result of the check
-            console.log('Product ID:', product._id, 'Is in cart:', isProductInCart);
+        const isProductInCart = prevCart.some(item => item._id === product._id);
 
-            if (isProductInCart) {
-                alert("This product has already been added to the cart.");
-                return prevCart; // No change to the cart
-            } else {
-                const newCart = [...prevCart, { ...product, quantity: 1 }];
-                // Optionally, add code to update the cart on the server here.
-                console.log('Updated cart:', newCart);
-                return newCart;
-            }
-        });
-    };
+        console.log('Is product in cart:', isProductInCart);
+
+        if (isProductInCart) {
+            alert("This product has already been added to the cart.");
+            return prevCart; // No change to the cart
+        } else {
+            const newCart = [...prevCart, { ...product, quantity: 1 }];
+            // Optionally, add code to update the cart on the server here.
+            console.log('New cart:', newCart);
+            return newCart;
+        }
+    });
+};
+
 
     return {
         isLogged: [isLogged, setIsLogged],
