@@ -16,7 +16,7 @@ const Cart = () => {
     <div>
       {cart.map(item => {
         // Ensure item and product exist
-        const product = item.product;
+        const product = item;
 
         if (!product) {
           console.error('Product data is missing:', item);
