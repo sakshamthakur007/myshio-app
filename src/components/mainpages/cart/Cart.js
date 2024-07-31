@@ -15,16 +15,26 @@ const Cart = () => {
   return (
     <div>
       {cart.map(item => {
-        const { product } = item;
-        // Check if product or product.images is undefined
-        if (!product || !product.images) {
+        // Ensure item and product exist
+        const product = item.product;
+
+        if (!product) {
+          console.error('Product data is missing:', item);
           return <p key={item._id}>Product data is missing</p>;
+        }
+
+        if (!product.images) {
+          console.error('Product images are missing:', product);
+          return <p key={product._id}>Image data is missing</p>;
         }
 
         return (
           <div key={product._id} className='detail'>
-            {/* Check if images is a string or an object and handle accordingly */}
-            <img src={typeof product.images === 'string' ? product.images : ''} alt={product.title || 'Product Image'} />
+            {/* Use default image if product.images is not a string or is undefined */}
+            <img 
+              src={typeof product.images === 'string' ? product.images : 'https://via.placeholder.com/150'} 
+              alt={product.title || 'Product Image'} 
+            />
             <div className='box-detail'>
               <div className='row'>
                 <h2>{product.title || 'No Title'}</h2>
