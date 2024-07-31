@@ -1,16 +1,16 @@
 // components/BuyNowButton.js
 
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const BuyNowButton = ({ onClick, label = 'Buy Now' }) => {
-    const history = useHistory();
+    const navigate = useNavigate(); // Use useNavigate instead of useHistory
 
     const handleClick = () => {
         if (onClick) {
             onClick(); // Call the provided onClick function
         }
-        history.push('/checkout'); // Navigate to the checkout page
+        navigate('/checkout'); // Navigate to the checkout page
     };
 
     return (
@@ -27,7 +27,7 @@ const BuyNowButton = ({ onClick, label = 'Buy Now' }) => {
                 fontSize: '1rem'
             }}
         >
-         Buy Now
+            {label}
         </button>
     );
 };
