@@ -14,19 +14,9 @@ const Cart = () => {
 
   return (
     <div>
-      {cart.map(item => {
+      {cart.map(product => {
         // Ensure item and product exist
-        const product = item;
-
-        if (!product) {
-          console.error('Product data is missing:', item);
-          return <p key={item._id}>Product data is missing</p>;
-        }
-
-        if (!product.images) {
-          console.error('Product images are missing:', product);
-          return <p key={product._id}>Image data is missing</p>;
-        }
+        
 
         return (
           <div key={product._id} className='detail'>
