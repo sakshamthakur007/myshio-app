@@ -29,12 +29,10 @@ const UserAPI = (token) => {
     if (!isLogged) return alert("Please log in first.");
 
     setCart(prevCart => {
-        // Debugging: Check product ID and current cart IDs
-        console.log('Product ID to add:', product._id);
-        console.log('Current cart items:', prevCart);
+        const productId = String(product._id); // Ensure product ID is a string
+        const isProductInCart = prevCart.some(item => String(item._id) === productId);
 
-        const isProductInCart = prevCart.some(item => item._id === product._id);
-
+        console.log('Product ID to add:', productId);
         console.log('Is product in cart:', isProductInCart);
 
         if (isProductInCart) {
@@ -42,12 +40,12 @@ const UserAPI = (token) => {
             return prevCart; // No change to the cart
         } else {
             const newCart = [...prevCart, { ...product, quantity: 1 }];
-            // Optionally, add code to update the cart on the server here.
             console.log('New cart:', newCart);
             return newCart;
         }
     });
 };
+
 
 
     return {
