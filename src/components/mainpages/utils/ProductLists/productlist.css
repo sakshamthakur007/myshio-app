@@ -33,13 +33,14 @@
 
 .product_box {
     position: absolute;
-    bottom: 15px; /* Position text box at the bottom */
+    bottom: 0; /* Position text box at the bottom */
     left: 15px;
     right: 15px;
     color: #ffffff; /* White text for visibility */
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
     padding: 10px; /* Add padding around text */
     border-radius: 5px; /* Smooth edges */
+    margin-bottom: 20px; /* Increase this value to push buttons downwards */
 }
 
 .product_box h2 {
@@ -69,6 +70,7 @@
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px; /* Increase this value to push buttons downwards */
 }
 
 .row_btn a {
@@ -94,7 +96,6 @@
     background: #555;
     margin-left: 5px;
 }
-
 .row_btn a:hover {
     background: crimson; /* Crimson hover effect for buttons */
 }
