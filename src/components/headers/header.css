@@ -1,44 +1,103 @@
-header{
+header {
     min-height: 70px;
     width: 100%;
     overflow: hidden;
     display: flex;
-    flex-wrap:wrap;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #ddd;
+    background-color: #1c1c1c; /* Dark background color */
+    border-bottom: 1px solid #444; /* Darker border */
+    padding: 0 20px; /* Padding for better spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
-header.logo{
-    flex:1;
-
+header .logo {
+    flex: 1;
+    color: #fff; /* White text for logo */
+    font-size: 1.5em; /* Increase font size */
+    font-weight: bold;
+    letter-spacing: 2px; /* Spacing for logo letters */
 }
 
-header a{
+header a {
     text-transform: uppercase;
-    color: black;
+    color: #eee; /* Light grey color for links */
+    text-decoration: none; /* Remove underline */
+    font-size: 0.9em; /* Slightly smaller text */
+    transition: color 0.3s ease; /* Smooth color transition */
 }
-header ul li{
+
+header a:hover {
+    color: #f39c12; /* Gold color on hover */
+}
+
+header ul li {
     display: inline-block;
-    opacity: 0.7;
+    opacity: 0.8;
     padding: 0 20px;
+    transition: opacity 0.3s ease; /* Smooth opacity transition */
 }
-header ul li:hover{
+
+header ul li:hover {
     opacity: 1;
 }
-.menu{
+
+.menu {
     display: none;
 }
-.cart-icon{
+
+.cart-icon {
     position: relative;
+    color: #eee; /* Light grey for cart icon */
+    font-size: 1.2em; /* Slightly larger icon */
 }
-.cart-icon span{
-    background: crimson;
+
+.cart-icon span {
+    background: #e74c3c; /* Darker red for badge */
     border-radius: 20px;
     color: white;
     position: absolute;
-    top:-10px;
+    top: -10px;
     right: -10px;
     padding: 5px 7px;
     font-size: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to badge */
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    header .logo {
+        margin-bottom: 10px;
+    }
+
+    .menu {
+        display: block;
+        color: #eee; /* Light grey for menu */
+        font-size: 1.2em; /* Increase font size */
+        margin-left: 20px;
+    }
+
+    header ul {
+        display: none; /* Hide the menu items initially */
+        flex-direction: column;
+        background-color: #333; /* Dark background for mobile menu */
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    header ul li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    header ul li:hover {
+        background-color: #444; /* Darker background on hover */
+    }
 }
