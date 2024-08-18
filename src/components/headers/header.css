@@ -18,8 +18,9 @@ header {
 }
 
 /* Ensure main content does not overlap with the fixed header */
-main {
-    margin-top: 70px; /* Add margin-top equal to or slightly more than the height of the header */
+.products-container {
+    margin-top: 70px; /* Adjust based on the height of the header */
+    padding: 20px; /* Optional: Add padding for better spacing */
 }
 
 /* Header styles for logo and links */
