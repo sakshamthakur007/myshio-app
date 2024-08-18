@@ -5,17 +5,15 @@
     padding: 15px;
     margin: 10px 0;
     position: relative;
-    box-sizing: border-box; /* Include padding and border in width */
-    background: rgba(45, 45, 58, 0.9); /* Semi-transparent dark background */
-    border-radius: 10px; /* Smooth edges */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-    background-image: url('https://img.freepik.com/premium-photo/modern-realistic-laptop-mockup-desk-with-dark-theme_964427-402.jpg'); /* Default background image */
-    background-size: cover; /* Scale the background image to cover the entire card */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent repeating */
-    background-attachment: fixed; /* Make the background image fixed */
+    box-sizing: border-box;
+    background-image: url('https://img.freepik.com/premium-photo/modern-realistic-laptop-mockup-desk-with-dark-theme_964427-402.jpg');
+    background-size: cover; /* Ensures the image covers the entire card */
+    background-position: center; /* Centers the image in the card */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Adds a shadow for depth */
 }
+
 
 .product_card:hover {
     transform: translateY(-5px); /* Slight lift on hover */
