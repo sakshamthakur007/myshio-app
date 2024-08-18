@@ -10,6 +10,9 @@
     border-radius: 10px; /* Smooth edges */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .product_card:hover {
@@ -27,14 +30,11 @@
 }
 
 .product_box {
-    position: relative;
-    bottom: 15px;
-    left: 0;
-    right: 0;
-    color: #ffffff; /* White text for visibility */
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
     padding: 10px; /* Add padding around text */
     border-radius: 5px; /* Smooth edges */
+    text-align: center;
+    margin-top: auto; /* Push content to the bottom */
 }
 
 .product_box h2 {
@@ -49,6 +49,8 @@
 
 .product_card span {
     color: crimson;
+    display: block;
+    margin-top: 5px;
 }
 
 .product_box p {
@@ -56,18 +58,18 @@
     height: 70px; /* Fixed height for text area */
     overflow: hidden;
     color: #ddd; /* Light grey for visibility */
-    margin: 0;
+    margin: 10px 0;
 }
 
 .row_btn {
     width: 100%;
-    margin-top: 20px; /* Adjust this to move buttons further down */
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
 }
 
 .row_btn a {
-    width: 50%;
+    width: 48%;
     text-align: center;
     text-transform: uppercase;
     color: white;
@@ -78,16 +80,6 @@
     background: #444; /* Dark background for buttons */
     border-radius: 5px;
     transition: background 0.3s ease; /* Smooth hover effect */
-}
-
-#btn_buy {
-    background: #555;
-    margin-right: 5px;
-}
-
-#btn_view {
-    background: #555;
-    margin-left: 5px;
 }
 
 .row_btn a:hover {
