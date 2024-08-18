@@ -11,18 +11,18 @@ header {
     border-bottom: 1px solid #444; /* Darker border */
     padding: 0 20px; /* Padding for better spacing */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    position: fixed; /* Keep header fixed at the top */
+    position: fixed; /* Fix the header to the top */
     top: 0; /* Align the header to the top of the page */
     left: 0; /* Align the header to the left of the page */
     z-index: 1000; /* Ensure header is on top of other content */
 }
 
-/* Adjust the top padding of the main content */
+/* Ensure main content does not overlap with the fixed header */
 main {
-    padding-top: 70px; /* Add padding to the top equal to the height of the header */
+    margin-top: 70px; /* Add margin-top equal to or slightly more than the height of the header */
 }
 
-/* Rest of your CSS for the header and other elements */
+/* Header styles for logo and links */
 header .logo {
     flex: 1;
     color: #fff; /* White text for logo */
