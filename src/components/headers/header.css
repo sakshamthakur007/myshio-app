@@ -10,6 +10,10 @@ header {
     border-bottom: 1px solid #444; /* Darker border */
     padding: 0 20px; /* Padding for better spacing */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    position: fixed; /* Keep header fixed at the top */
+    top: 0; /* Align the header to the top of the page */
+    left: 0; /* Align the header to the left of the page */
+    z-index: 1000; /* Ensure header is on top of other content */
 }
 
 header .logo {
