@@ -10,6 +10,10 @@
     border-radius: 10px; /* Smooth edges */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    background-image: url('https://img.freepik.com/premium-photo/modern-realistic-laptop-mockup-desk-with-dark-theme_964427-402.jpg'); /* Default background image */
+    background-size: cover; /* Ensure image covers the entire card */
+    background-position: center; /* Center image */
+    background-repeat: no-repeat; /* Prevent repeating */
 }
 
 .product_card:hover {
