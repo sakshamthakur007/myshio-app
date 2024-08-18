@@ -5,19 +5,21 @@
   margin: 0;
 }
 
-/* Ensure the app takes full width and height */
+/* Dark-themed background for the app */
 .App {
   width: 100%;
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  box-shadow: none; /* Remove shadow to ensure full coverage */
+  background: linear-gradient(135deg, #1f1c2c 0%, #928dab 100%); /* Rich, dark gradient */
+  color: #ffffff; /* Light text for contrast */
+  font-family: 'Helvetica Neue', sans-serif; /* Modern, classy font */
 }
 
 /* Styling for links */
 a {
   text-decoration: none;
-  color: inherit; /* Inherit color from parent element */
+  color: #ffffff; /* Light color for better visibility on dark background */
 }
 
 /* Remove list styling */
@@ -30,6 +32,7 @@ button {
   border: none;
   outline: none;
   background: transparent;
+  color: #ffffff; /* Light color for better visibility */
   cursor: pointer;
 }
 
