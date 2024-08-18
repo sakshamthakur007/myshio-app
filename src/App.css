@@ -1,0 +1,5 @@
+/* Ensure the content starts below the fixed header */
+.content {
+    margin-top: 70px; /* Adjust this value to match the height of your header */
+    padding: 20px; /* Optional padding for the content */
+}
