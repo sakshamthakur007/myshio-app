@@ -8,7 +8,7 @@
     box-sizing: border-box; /* Include padding and border in width */
     background: rgba(45, 45, 58, 0.9); /* Semi-transparent dark background */
     border-radius: 10px; /* Smooth edges */
-     background-image: url('https://th.bing.com/th/id/OIP.BDvcHxNxEGB3fITVdcmbygHaDt?pid=ImgDet&w=220&h=131.01123595505618&c=7');
+     background-image: url('https://img.freepik.com/premium-photo/3d-rendering-illustration-laptop-computer-with-colorful-screen-keyboard-place-darkroom-purple-lighting-image-presentation_37129-1488.jpg');
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
