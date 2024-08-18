@@ -1,31 +1,22 @@
-/* Header styles */
+/* Styles for the fixed header */
 header {
-    min-height: 70px;
+    position: fixed; /* Keeps the header fixed at the top */
+    top: 0;
+    left: 0;
     width: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    min-height: 70px;
     background-color: #1c1c1c; /* Dark background color */
     border-bottom: 1px solid #444; /* Darker border */
     padding: 0 20px; /* Padding for better spacing */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    position: fixed; /* Fix the header to the top */
-    top: 0; /* Align the header to the top of the page */
-    left: 0; /* Align the header to the left of the page */
-    z-index: 1000; /* Ensure header is on top of other content */
+    z-index: 1000; /* Makes sure header is above other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-/* Ensure main content does not overlap with the fixed header */
-.products-container {
-    margin-top: 70px; /* Adjust based on the height of the header */
-    padding: 20px; /* Optional: Add padding for better spacing */
-}
-
-/* Header styles for logo and links */
 header .logo {
-    flex: 1;
     color: #fff; /* White text for logo */
     font-size: 1.5em; /* Increase font size */
     font-weight: bold;
@@ -55,17 +46,13 @@ header ul li:hover {
     opacity: 1;
 }
 
-.menu {
-    display: none;
-}
-
-.cart-icon {
+header .cart-icon {
     position: relative;
     color: #eee; /* Light grey for cart icon */
     font-size: 1.2em; /* Slightly larger icon */
 }
 
-.cart-icon span {
+header .cart-icon span {
     background: #e74c3c; /* Darker red for badge */
     border-radius: 20px;
     color: white;
@@ -77,7 +64,7 @@ header ul li:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to badge */
 }
 
-/* Responsive improvements */
+/* Responsive adjustments for mobile */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
