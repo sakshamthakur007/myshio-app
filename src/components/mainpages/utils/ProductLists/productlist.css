@@ -7,8 +7,11 @@
     position: relative;
     box-sizing: border-box; /* Include padding and border in width */
     background: rgba(45, 45, 58, 0.9); /* Semi-transparent dark background */
+    background-image: url('https://th.bing.com/th/id/OIP.A12doSR1Bvyigyo0LeyQXAHaJQ?pid=ImgDet&w=180&h=180&c=7');
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-size: cover; /* Ensure the image covers the entire card */
+    background-position: center; /* Center the background image */
     border-radius: 10px; /* Smooth edges */
-     background-image: url('https://th.bing.com/th/id/OIP.A12doSR1Bvyigyo0LeyQXAHaJQ?pid=ImgDet&w=180&h=180&c=7');
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
@@ -17,6 +20,7 @@
     transform: translateY(-5px); /* Slight lift on hover */
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
 }
+
 
 .product_card img {
     width: 100%; /* Full width of the card */
