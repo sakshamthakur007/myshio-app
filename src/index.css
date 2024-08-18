@@ -1,34 +1,39 @@
-*{
+/* Reset and box-sizing */
+* {
   padding: 0;
   box-sizing: border-box;
   margin: 0;
 }
 
-.App{
-  max-width: 1230px;
+/* Ensure the app takes full width and height */
+.App {
+  width: 100%;
   min-height: 100vh;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-shadow: 0 0 35px #eee;
+  margin: 0;
+  padding: 0;
+  box-shadow: none; /* Remove shadow to ensure full coverage */
 }
 
-a{
+/* Styling for links */
+a {
   text-decoration: none;
+  color: inherit; /* Inherit color from parent element */
 }
 
-ul li{
+/* Remove list styling */
+ul li {
   list-style: none;
 }
 
-button{
+/* Button styles */
+button {
   border: none;
-  outline:none;
-  background:transparent;
+  outline: none;
+  background: transparent;
   cursor: pointer;
 }
 
+/* Import CSS files */
 @import url("./components/headers/header.css");
-
 @import url("./components/mainpages/products/products.css");
-
 @import url("./components/mainpages/utils/DetailProducts/detailProduct.css");
