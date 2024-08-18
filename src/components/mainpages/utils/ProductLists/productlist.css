@@ -5,16 +5,12 @@
     padding: 15px;
     margin: 10px 0;
     position: relative;
-    box-sizing: border-box;
-    background-image: url('https://img.freepik.com/premium-photo/modern-realistic-laptop-mockup-desk-with-dark-theme_964427-402.jpg');
-    background-size: 150%; /* Zoom out the image by increasing the size */
-    background-position: center; /* Center the image in the card */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    border-radius: 10px; /* Adds rounded corners */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Adds a shadow for depth */
+    box-sizing: border-box; /* Include padding and border in width */
+    background: rgba(45, 45, 58, 0.9); /* Semi-transparent dark background */
+    border-radius: 10px; /* Smooth edges */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
-
-
 
 .product_card:hover {
     transform: translateY(-5px); /* Slight lift on hover */
@@ -23,7 +19,7 @@
 
 .product_card img {
     width: 100%; /* Full width of the card */
-    height: auto; /* Adjust height based on image aspect ratio */
+    height: 200px; /* Adjusted height */
     display: block;
     object-fit: cover; /* Maintain aspect ratio */
     border-radius: 5px; /* Smooth edges for image */
