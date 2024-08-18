@@ -1,3 +1,4 @@
+/* Header styles */
 header {
     min-height: 70px;
     width: 100%;
@@ -16,6 +17,12 @@ header {
     z-index: 1000; /* Ensure header is on top of other content */
 }
 
+/* Adjust the top padding of the main content */
+main {
+    padding-top: 70px; /* Add padding to the top equal to the height of the header */
+}
+
+/* Rest of your CSS for the header and other elements */
 header .logo {
     flex: 1;
     color: #fff; /* White text for logo */
