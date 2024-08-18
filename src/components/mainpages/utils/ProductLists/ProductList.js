@@ -8,16 +8,6 @@ const ProductList = ({ product, isAdmin }) => {
   };
 
   return (
-    <div className='product_card'>import React from 'react';
-import BtnRender from './BtnRender';
-
-const ProductList = ({ product, isAdmin }) => {
-  const handleCheckboxChange = (productId) => {
-    // Handle checkbox change
-    console.log(`Checkbox for product ${productId} changed`);
-  };
-
-  return (
     <div className='product_card'>
       {isAdmin && (
         <input 
@@ -43,5 +33,3 @@ const ProductList = ({ product, isAdmin }) => {
 };
 
 export default ProductList;
-
-      
