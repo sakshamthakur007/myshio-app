@@ -7,7 +7,7 @@
     position: relative;
     box-sizing: border-box; /* Include padding and border in width */
     background: rgba(45, 45, 58, 0.9); /* Semi-transparent dark background */
-    background-image: url('https://th.bing.com/th/id/OIP.A12doSR1Bvyigyo0LeyQXAHaJQ?pid=ImgDet&w=144&h=180&c=7');
+    background-image: url('https://th.bing.com/th/id/OIP.A12doSR1Bvyigyo0LeyQXAHaJQ?pid=ImgDet&w=143.31932773109244&h=180&c=7');
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-size: cover; /* Ensure the image covers the entire card */
     background-position: center; /* Center the background image */
